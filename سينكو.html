@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20261009-04-61a833b","C":{"Abril Fatface":"YACgEZbkUVE,0","Albert Sans":"YAHO2HRfeh4,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo Black":"YACgEZulLoA,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Baloo 2":"YAHO2IcQUcM,0","Barlow Condensed":"YAFdJljEuFc,0","Barlow":"YAFdJsyuOPM,1","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Cinzel":"YACgEeV8bIQ,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Figtree":"YAHO2b-mV7A,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Fredoka":"YACgEZml080,0","Georgia":"YAGzXkO0pEM,0","Hanken Grotesk":"YAHO2VB9G0I,0","Helvetica":"YAFcf7zkXN0,0","IBM Plex Mono":"YAFdJkmvhGI,0","IBM Plex Sans":"YAFdJgT0SHI,0","Impact":"YAFcfnjI7Vk,0","Instrument Sans":"YAHO2bKyaSQ,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Italiana":"YAHO2Toik_w,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Karla":"YAHO2V2NSXM,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Libre Caslon Display":"YAHO2XhLmt0,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Noto Sans JP":"YAFdJiHXlcI,0","Noto Sans KR":"YAGsojZj-RQ,0","Nunito Sans":"YAFdtQJYB9w,1","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Outfit":"YAHO2nVlg14,0","Pacifico":"YADLjORQ1u4,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAHO2gdhi18,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Public Sans":"YAFdJj8NdaU,1","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Sarabun":"YAFdJssSnME,0","Schibsted Grotesk":"YAHO2sWydRk,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Space Mono":"YADW1-vpsoc,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/3ea5843eacd3e51f.telemetry_sdk.js" integrity="sha512-1IT905GQp6Xezy7dJYJjQl6KtI/PDxD5Vu755gJMNA+luF1QkRT8rHzF+xP7Ekem4HWP8sPFcQQAmx6FCSGaMg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Textile Factory Inventory Project</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; width: 100%; font-family: Tahoma, sans-serif; color: #333; }
+    .main-content { width: 100%; max-width: 1100px; margin: auto; padding: 20px; }
+    .top-area { background: #263b40; color: #fff; }
+    .top-area .main-content { padding-top: 25px; padding-bottom: 15px; }
+    h1 { margin: 0 0 10px; font-size: 28px; font-weight: 700; }
+    h2 { margin: 0 0 10px; font-size: 23px; font-weight: 700; }
+    h3 { margin: 0 0 15px; font-size: 18px; font-weight: 700; }
+    p { margin: 0 0 15px; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 20px; }
+    .tabs button { padding: 10px 14px; background: #40575b; color: #fff; border: 1px solid #617679; cursor: pointer; }
+    .tabs button.active { background: #eee; color: #222; }
+    .box, .stat { background: #fff; border: 1px solid #ccc; }
+    .box { padding: 20px; margin-bottom: 20px; }
+    .stats { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+    .stat { flex: 1 1 190px; padding: 15px; }
+    .stat strong { display: block; margin-top: 10px; font-size: 22px; }
+    .table-area { overflow-x: auto; }
+    table { width: 100%; min-width: 600px; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #eee; }
+    .low { background: #ffe6e2; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: 700; }
+    input, select { width: 100%; padding: 10px; border: 1px solid #aaa; background: #fff; color: #333; border-radius: 2px; }
+    .save-button { margin-top: 20px; padding: 10px 20px; background: #16796e; color: #fff; border: 1px solid #12655c; cursor: pointer; }
+    .save-button:hover { background: #12655c; }
+    .save-button:disabled { opacity: .6; cursor: wait; }
+    button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #eead42; outline-offset: 2px; }
+    .message { margin-top: 15px; margin-bottom: 0; font-weight: 700; }
+    [hidden] { display: none !important; }
+    @media (max-width: 600px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .main-content { padding: 15px; }
+      .tabs button { flex: 1 1 auto; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/263f7f1ec427fef1.data_sdk.js" type="text/javascript" integrity="sha512-G5r5+ZpgQ1ELqZ8tI9imlWClKvYZ57SrzbGr898u8le5l2OuBwnWDOf9qbb9mCGSCmLi/3zszXyL+nX96lu7Lg=="></script>
+  <script src="/_sdk/7f51878a26dda571.editing_sdk.js" type="text/javascript" integrity="sha512-lv2tc4rONGhIWbY0ih8IjIqw943uiwvC9BM8dCj48SpTnOr728gJkoyMnfD0Yfa9KbBgBGdq6uAFyQuDfezvEg=="></script>
+  <script src="/_sdk/221ab7571fc66e1b.resizing_sdk.js" type="text/javascript" integrity="sha512-brXJ8PEVMWyvFfRXR3J+lXcBL9xcTCDHg4wYW7JDpQNdbOBkBezAQsQLUeUc2BOFREYS4N9GREjyhzX1N1VFdA=="></script>
+ </head>
+ <body data-template-id="__page-root">
+  <header class="top-area canva-header" data-template-id="header-area">
+   <div class="main-content">
+    <h1 class="canva-text" data-template-id="project-title">Textile Factory Inventory Project</h1>
+    <p class="canva-text" data-template-id="project-subtitle">A simple way to track yarn and fabric warehouse stock.</p>
+    <nav class="tabs" aria-label="Project pages">
+     <button type="button" class="canva-button active" id="tab-yarn" data-page="yarn" data-template-id="tab-yarn" aria-current="page">Yarn Inventory</button> <button type="button" class="canva-button" id="tab-fabric" data-page="fabric" data-template-id="tab-fabric">Fabric Inventory</button> <button type="button" class="canva-button" id="tab-production" data-page="production" data-template-id="tab-production">Production</button> <button type="button" class="canva-button" id="tab-inbound" data-page="inbound" data-template-id="tab-inbound">Add Stock</button> <button type="button" class="canva-button" id="tab-outbound" data-page="outbound" data-template-id="tab-outbound">Issue Stock</button>
+    </nav>
+   </div>
+  </header>
+  <main class="main-content">
+   <p class="box canva-text" data-template-id="storage-note">Transactions are saved in this browser only; they will not appear on another device or browser.</p>
+   <p id="startup-message" class="message" role="status" aria-live="polite"></p>
+   <section id="page-yarn">
+    <h2 class="canva-text" data-template-id="yarn-heading">Yarn Inventory</h2>
+    <p class="canva-text" data-template-id="yarn-help">Yarn with less than 100 kg in stock is highlighted.</p>
+    <div class="stats">
+     <div class="stat"><span class="canva-text" data-template-id="yarn-total-label">Total Yarn</span><strong id="yarn-total">0 kg</strong>
+     </div>
+     <div class="stat"><span class="canva-text" data-template-id="low-label">Low-Stock Items</span><strong id="low-count">0</strong>
+     </div>
+     <div class="stat"><span class="canva-text" data-template-id="yarn-week-label">Last 7 Days (In / Out)</span><strong id="yarn-week">0 / 0 kg</strong>
+     </div>
+     <div class="stat"><span class="canva-text" data-template-id="yarn-month-label">Last 30 Days (In / Out)</span><strong id="yarn-month">0 / 0 kg</strong>
+     </div>
+    </div>
+    <div class="box">
+     <h3 class="canva-text" data-template-id="yarn-table-heading">Yarn List</h3>
+     <div class="table-area">
+      <table>
+       <thead>
+        <tr>
+         <th class="canva-text" data-template-id="yarn-column-id">Yarn Code</th>
+         <th class="canva-text" data-template-id="yarn-column-color">Color</th>
+         <th class="canva-text" data-template-id="yarn-column-quantity">Quantity</th>
+         <th class="canva-text" data-template-id="yarn-column-supplier">Supplier</th>
+         <th class="canva-text" data-template-id="yarn-column-status">Status</th>
+        </tr>
+       </thead>
+       <tbody id="yarn-table"></tbody>
+      </table>
+     </div>
+     <p id="yarn-empty" class="canva-text mt-4" data-template-id="yarn-empty">No yarn has been added yet.</p>
+    </div>
+   </section>
+   <section id="page-fabric" hidden>
+    <h2 class="canva-text" data-template-id="fabric-heading">Fabric Inventory</h2>
+    <p class="canva-text" data-template-id="fabric-help">Produced or returned fabric appears here.</p>
+    <div class="stats">
+     <div class="stat"><span class="canva-text" data-template-id="fabric-total-label">Total Fabric</span><strong id="fabric-total">0 m</strong>
+     </div>
+     <div class="stat"><span class="canva-text" data-template-id="fabric-week-label">Last 7 Days (In / Out)</span><strong id="fabric-week">0 / 0 m</strong>
+     </div>
+     <div class="stat"><span class="canva-text" data-template-id="fabric-month-label">Last 30 Days (In / Out)</span><strong id="fabric-month">0 / 0 m</strong>
+     </div>
+    </div>
+    <div class="box">
+     <h3 class="canva-text" data-template-id="fabric-table-heading">Fabric List</h3>
+     <div class="table-area">
+      <table>
+       <thead>
+        <tr>
+         <th class="canva-text" data-template-id="fabric-column-id">Fabric Code</th>
+         <th class="canva-text" data-template-id="fabric-column-type">Type</th>
+         <th class="canva-text" data-template-id="fabric-column-color">Color</th>
+         <th class="canva-text" data-template-id="fabric-column-quantity">Quantity</th>
+         <th class="canva-text" data-template-id="fabric-column-location">Location</th>
+        </tr>
+       </thead>
+       <tbody id="fabric-table"></tbody>
+      </table>
+     </div>
+     <p id="fabric-empty" class="canva-text mt-4" data-template-id="fabric-empty">No fabric has been added yet.</p>
+    </div>
+   </section>
+   <section id="page-production" hidden>
+    <h2 class="canva-text" data-template-id="production-heading">Record Production</h2>
+    <p class="canva-text" data-template-id="production-help">Deduct used yarn and add produced fabric in one transaction.</p>
+    <form id="production-form" class="box" novalidate>
+     <div class="form-grid">
+      <div><label class="canva-text" data-template-id="production-yarn-label" for="production-yarn">Yarn Code</label><select id="production-yarn" required></select>
+      </div>
+      <div><label class="canva-text" data-template-id="production-used-label" for="production-used">Yarn Used (kg)</label><input id="production-used" type="number" min="0.001" step="any" required>
+      </div>
+      <div><label class="canva-text" data-template-id="production-id-label" for="production-id">Produced Fabric Code</label><input id="production-id" maxlength="60" required>
+      </div>
+      <div><label class="canva-text" data-template-id="production-type-label" for="production-type">Fabric Type</label><input id="production-type" maxlength="80" required>
+      </div>
+      <div><label class="canva-text" data-template-id="production-color-label" for="production-color">Fabric Color</label><input id="production-color" maxlength="80" required>
+      </div>
+      <div><label class="canva-text" data-template-id="production-made-label" for="production-made">Fabric Produced (m)</label><input id="production-made" type="number" min="0.001" step="any" required>
+      </div>
+      <div><label class="canva-text" data-template-id="production-location-label" for="production-location">Storage Location</label><input id="production-location" maxlength="100" required>
+      </div>
+     </div><button type="submit" class="canva-button save-button" data-template-id="production-save">Save Production</button>
+     <p id="production-message" class="message" role="status" aria-live="polite"></p>
+    </form>
+   </section>
+   <section id="page-inbound" hidden>
+    <h2 class="canva-text" data-template-id="inbound-heading">Add Incoming Stock</h2>
+    <p class="canva-text" data-template-id="inbound-help">Record a yarn delivery or fabric return to the warehouse.</p>
+    <form id="inbound-form" class="box" novalidate>
+     <div class="form-grid">
+      <div><label class="canva-text" data-template-id="inbound-category-label" for="inbound-category">Category</label><select id="inbound-category"><option value="yarn" data-template-id="inbound-option-yarn" class="canva-text">Yarn</option><option value="fabric" data-template-id="inbound-option-fabric" class="canva-text">Fabric</option></select>
+      </div>
+      <div><label class="canva-text" data-template-id="inbound-id-label" for="inbound-id">Item Code</label><input id="inbound-id" maxlength="60" required>
+      </div>
+      <div><label class="canva-text" data-template-id="inbound-color-label" for="inbound-color">Color</label><input id="inbound-color" maxlength="80" required>
+      </div>
+      <div><label class="canva-text" data-template-id="inbound-quantity-label" for="inbound-quantity">Quantity (kg or m)</label><input id="inbound-quantity" type="number" min="0.001" step="any" required>
+      </div>
+      <div id="supplier-box"><label class="canva-text" data-template-id="inbound-supplier-label" for="inbound-supplier">Supplier</label><input id="inbound-supplier" maxlength="100" required>
+      </div>
+      <div class="fabric-field" hidden><label class="canva-text" data-template-id="inbound-type-label" for="inbound-type">Fabric Type</label><input id="inbound-type" maxlength="80">
+      </div>
+      <div class="fabric-field" hidden><label class="canva-text" data-template-id="inbound-location-label" for="inbound-location">Storage Location</label><input id="inbound-location" maxlength="100">
+      </div>
+     </div><button type="submit" class="canva-button save-button" data-template-id="inbound-save">Add to Inventory</button>
+     <p id="inbound-message" class="message" role="status" aria-live="polite"></p>
+    </form>
+   </section>
+   <section id="page-outbound" hidden>
+    <h2 class="canva-text" data-template-id="outbound-heading">Issue Stock</h2>
+    <p class="canva-text" data-template-id="outbound-help">Choose an item and enter the quantity leaving the warehouse.</p>
+    <form id="outbound-form" class="box" novalidate>
+     <div class="form-grid">
+      <div><label class="canva-text" data-template-id="outbound-category-label" for="outbound-category">Category</label><select id="outbound-category"><option value="yarn" data-template-id="outbound-option-yarn" class="canva-text">Yarn</option><option value="fabric" data-template-id="outbound-option-fabric" class="canva-text">Fabric</option></select>
+      </div>
+      <div><label class="canva-text" data-template-id="outbound-id-label" for="outbound-id">Item Code</label><select id="outbound-id" required></select>
+      </div>
+      <div><label class="canva-text" data-template-id="outbound-quantity-label" for="outbound-quantity">Quantity (kg or m)</label><input id="outbound-quantity" type="number" min="0.001" step="any" required>
+      </div>
+     </div><button type="submit" class="canva-button save-button" data-template-id="outbound-save">Record Stock Issue</button>
+     <p id="outbound-message" class="message" role="status" aria-live="polite"></p>
+    </form>
+   </section>
+  </main>
+  <footer class="main-content">
+  </footer>
+  <script>
+    const STORAGE_KEY = 'textile-factory-inventory-v1';
+    const $ = id => document.getElementById(id);
+    let transactions = [];
+    let storageReady = true;
+
+    function message(id, text, success) {
+      const el = $(id);
+      el.textContent = text;
+      el.style.color = success ? '#17603c' : '#a12727';
+    }
+
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored !== null) {
+        const parsed = JSON.parse(stored);
+        if (!Array.isArray(parsed)) throw new Error('Invalid inventory');
+        transactions = parsed;
+      }
+    } catch (error) {
+      storageReady = false;
+      message('startup-message', 'Could not read browser data. New transactions cannot be recorded until browser storage is available.', false);
+    }
+
+    const clean = value => String(value ?? '').trim();
+    const keyOf = (category, id) => category + ':' + clean(id).toLowerCase();
+    const amount = value => {
+      const n = Number(value);
+      return Number.isFinite(n) && n > 0 && n <= 1000000000 ? n : 0;
+    };
+    const fmt = value => Number(value.toFixed(2)).toLocaleString('en-US');
+
+    function calculateStock() {
+      const stock = {};
+      function apply(category, id, change, details = {}) {
+        const key = keyOf(category, id);
+        if (!stock[key]) stock[key] = { category, id: clean(id), quantity: 0, color: '', supplier: '', type: '', location: '' };
+        const item = stock[key];
+        item.quantity += change;
+        for (const field of ['color', 'supplier', 'type']) {
+          if (!item[field] && details[field]) item[field] = clean(details[field]);
+        }
+        if (details.location) item.location = clean(details.location);
+      }
+      for (const row of transactions) {
+        if (!row || !amount(row.quantity)) continue;
+        if (row.kind === 'production' && row.output && amount(row.output.quantity)) {
+          apply('yarn', row.id, -row.quantity, row);
+          apply('fabric', row.output.id, row.output.quantity, row.output);
+        } else if ((row.kind === 'inbound' || row.kind === 'outbound') && ['yarn', 'fabric'].includes(row.category)) {
+          apply(row.category, row.id, row.kind === 'inbound' ? row.quantity : -row.quantity, row);
+        }
+      }
+      return stock;
+    }
+
+    function movement(category, days) {
+      let incoming = 0, outgoing = 0;
+      const cutoff = Date.now() - days * 86400000;
+      for (const row of transactions) {
+        if (!row || Date.parse(row.created_at) < cutoff || !amount(row.quantity)) continue;
+        if (row.kind === 'production') {
+          if (category === 'yarn') outgoing += row.quantity;
+          if (category === 'fabric' && row.output && amount(row.output.quantity)) incoming += row.output.quantity;
+        } else if (row.category === category) {
+          if (row.kind === 'inbound') incoming += row.quantity;
+          if (row.kind === 'outbound') outgoing += row.quantity;
+        }
+      }
+      return `${fmt(incoming)} / ${fmt(outgoing)} ${category === 'yarn' ? 'kg' : 'm'}`;
+    }
+
+    function updateTable(bodyId, items, category) {
+      const body = $(bodyId);
+      const existing = new Map([...body.children].map(row => [row.dataset.key, row]));
+      const keep = new Set();
+      for (const item of items) {
+        const key = keyOf(category, item.id);
+        keep.add(key);
+        let tr = existing.get(key);
+        if (!tr) {
+          tr = document.createElement('tr');
+          tr.dataset.key = key;
+          for (let i = 0; i < 5; i++) tr.appendChild(document.createElement('td'));
+          body.appendChild(tr);
+        }
+        tr.classList.toggle('low', category === 'yarn' && item.quantity < 100);
+        const values = category === 'yarn'
+          ? [item.id, item.color || '—', fmt(item.quantity) + ' kg', item.supplier || '—', item.quantity < 100 ? 'Low stock' : 'Available']
+          : [item.id, item.type || '—', item.color || '—', fmt(item.quantity) + ' m', item.location || '—'];
+        values.forEach((value, i) => { if (tr.children[i].textContent !== value) tr.children[i].textContent = value; });
+      }
+      for (const [key, row] of existing) if (!keep.has(key)) row.remove();
+    }
+
+    function fillOptions(select, items) {
+      const selected = select.value;
+      const wanted = [['', 'Select an item'], ...items.map(item => [item.id, `${item.id} (${fmt(item.quantity)})`])];
+      if (select.options.length === wanted.length && wanted.every(([value, label], i) =>
+        select.options[i].value === value && select.options[i].textContent === label)) return;
+      select.replaceChildren(...wanted.map(([value, label]) => new Option(label, value)));
+      if (wanted.some(([value]) => value === selected)) select.value = selected;
+    }
+
+    function render() {
+      const stock = calculateStock();
+      const items = Object.values(stock).sort((a, b) => a.id.localeCompare(b.id, 'en'));
+      const yarn = items.filter(item => item.category === 'yarn');
+      const fabric = items.filter(item => item.category === 'fabric');
+      updateTable('yarn-table', yarn, 'yarn');
+      updateTable('fabric-table', fabric, 'fabric');
+      $('yarn-empty').hidden = yarn.length > 0;
+      $('fabric-empty').hidden = fabric.length > 0;
+      $('yarn-total').textContent = fmt(yarn.reduce((sum, item) => sum + item.quantity, 0)) + ' kg';
+      $('fabric-total').textContent = fmt(fabric.reduce((sum, item) => sum + item.quantity, 0)) + ' m';
+      $('low-count').textContent = fmt(yarn.filter(item => item.quantity < 100).length);
+      for (const category of ['yarn', 'fabric']) {
+        $(category + '-week').textContent = movement(category, 7);
+        $(category + '-month').textContent = movement(category, 30);
+      }
+      fillOptions($('production-yarn'), yarn.filter(item => item.quantity > 0));
+      fillOptions($('outbound-id'), items.filter(item => item.category === $('outbound-category').value && item.quantity > 0));
+      return stock;
+    }
+
+    function detailError(stock, category, id, color, supplier, type) {
+      const other = category === 'yarn' ? 'fabric' : 'yarn';
+      if (stock[keyOf(other, id)]) return 'This code is already used in another category.';
+      const current = stock[keyOf(category, id)];
+      if (!current) return '';
+      if (current.color && current.color.toLowerCase() !== color.toLowerCase()) return 'A different color is already recorded for this code.';
+      if (category === 'yarn' && current.supplier && current.supplier.toLowerCase() !== supplier.toLowerCase()) return 'A different supplier is already recorded for this code.';
+      if (category === 'fabric' && current.type && current.type.toLowerCase() !== type.toLowerCase()) return 'A different fabric type is already recorded for this code.';
+      return '';
+    }
+
+    function commit(form, page, row) {
+      if (!storageReady) return message(page + '-message', 'Browser storage is unavailable; the transaction was not saved.', false);
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+      try {
+        const next = [...transactions, { ...row, created_at: new Date().toISOString() }];
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+        transactions = next;
+        form.reset();
+        updateInboundFields();
+        render();
+        message(page + '-message', 'Transaction saved in this browser.', true);
+      } catch (error) {
+        message(page + '-message', 'Could not save the transaction in this browser. Check storage settings or available space.', false);
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    function updateInboundFields() {
+      const fabric = $('inbound-category').value === 'fabric';
+      $('supplier-box').hidden = fabric;
+      $('inbound-supplier').required = !fabric;
+      document.querySelectorAll('.fabric-field').forEach(field => { field.hidden = !fabric; });
+      $('inbound-type').required = fabric;
+      $('inbound-location').required = fabric;
+    }
+
+    document.querySelectorAll('.tabs button').forEach(button => button.addEventListener('click', () => {
+      const page = button.dataset.page;
+      for (const name of ['yarn', 'fabric', 'production', 'inbound', 'outbound']) {
+        $('page-' + name).hidden = name !== page;
+        const tab = $('tab-' + name);
+        tab.classList.toggle('active', name === page);
+        if (name === page) tab.setAttribute('aria-current', 'page');
+        else tab.removeAttribute('aria-current');
+      }
+    }));
+
+    $('inbound-category').addEventListener('change', updateInboundFields);
+    $('outbound-category').addEventListener('change', render);
+
+    $('inbound-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const category = $('inbound-category').value;
+      const id = clean($('inbound-id').value);
+      const color = clean($('inbound-color').value);
+      const quantity = amount($('inbound-quantity').value);
+      const supplier = category === 'yarn' ? clean($('inbound-supplier').value) : '';
+      const type = category === 'fabric' ? clean($('inbound-type').value) : '';
+      const location = category === 'fabric' ? clean($('inbound-location').value) : '';
+      if (!id || !color || !quantity || (category === 'yarn' && !supplier) || (category === 'fabric' && (!type || !location))) {
+        return message('inbound-message', 'Complete the required fields and enter a positive quantity.', false);
+      }
+      const problem = detailError(calculateStock(), category, id, color, supplier, type);
+      if (problem) return message('inbound-message', problem, false);
+      commit(event.currentTarget, 'inbound', { kind: 'inbound', category, id, color, quantity, supplier, type, location });
+    });
+
+    $('outbound-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const category = $('outbound-category').value;
+      const id = $('outbound-id').value;
+      const quantity = amount($('outbound-quantity').value);
+      const item = calculateStock()[keyOf(category, id)];
+      if (!item || !quantity) return message('outbound-message', 'Select an item and enter a positive quantity.', false);
+      if (quantity > item.quantity) return message('outbound-message', 'The requested quantity exceeds available stock.', false);
+      commit(event.currentTarget, 'outbound', {
+        kind: 'outbound', category, id: item.id, quantity,
+        color: item.color, supplier: item.supplier, type: item.type, location: item.location
+      });
+    });
+
+    $('production-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const yarnId = $('production-yarn').value;
+      const used = amount($('production-used').value);
+      const id = clean($('production-id').value);
+      const type = clean($('production-type').value);
+      const color = clean($('production-color').value);
+      const made = amount($('production-made').value);
+      const location = clean($('production-location').value);
+      const stock = calculateStock();
+      const yarn = stock[keyOf('yarn', yarnId)];
+      if (!yarn || !used || !id || !type || !color || !made || !location) {
+        return message('production-message', 'Complete the required fields and enter positive quantities.', false);
+      }
+      if (used > yarn.quantity) return message('production-message', 'The requested yarn quantity exceeds available stock.', false);
+      const problem = detailError(stock, 'fabric', id, color, '', type);
+      if (problem) return message('production-message', problem, false);
+      commit(event.currentTarget, 'production', {
+        kind: 'production', id: yarn.id, quantity: used, color: yarn.color, supplier: yarn.supplier,
+        output: { id, type, color, quantity: made, location }
+      });
+    });
+
+    updateInboundFields();
+    render();
+  </script>
+ </body>
+</html>
